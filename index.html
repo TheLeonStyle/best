@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Амишка</title>
+
+	<style>
+		body {
+			background: linear-gradient(135deg, #f3c623, #f76b8a, #a8c0ff);
+			font-family: 'Arial', sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			animation: backgroundAnimation 10s infinite alternate;
+		}
+
+		@keyframes backgroundAnimation {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			100% {
+				background-position: 100% 50%;
+			}
+		}
+
+		.container {
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.8);
+			padding: 50px;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			animation: containerFadeIn 1s ease-out;
+		}
+
+		@keyframes containerFadeIn {
+			from {
+				transform: scale(0.8);
+				opacity: 0;
+			}
+
+			to {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		h1 {
+			font-size: 3em;
+			color: #ff7f50;
+			margin-bottom: 20px;
+		}
+
+		@keyframes titleGlow {
+			0% {
+				text-shadow: 0 0 10px #ff7f50, 0 0 20px #ff4500, 0 0 30px #ff0000;
+			}
+
+			100% {
+				text-shadow: 0 0 20px #ff4500, 0 0 30px #ff0000, 0 0 40px #ff7f50;
+			}
+		}
+
+		.compliments p {
+			font-size: 1.5em;
+			color: #555;
+			margin: 10px 0;
+			opacity: 0;
+			animation: textFadeIn 1s ease-out forwards;
+		}
+
+		.compliments p:nth-child(odd) {
+			color: #ff4500;
+		}
+
+		.compliments p:nth-child(1) {
+			animation-delay: 0.5s;
+		}
+
+		.compliments p:nth-child(2) {
+			animation-delay: 1s;
+		}
+
+		.compliments p:nth-child(3) {
+			animation-delay: 1.5s;
+		}
+
+		.compliments p:nth-child(4) {
+			animation-delay: 2s;
+		}
+
+		.compliments p:nth-child(5) {
+			animation-delay: 2.5s;
+		}
+
+		.compliments p:nth-child(6) {
+			animation-delay: 3s;
+		}
+
+		@keyframes textFadeIn {
+			from {
+				transform: translateY(20px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Амишка</h1>
+		<div class="compliments">
+			<p>Ты невероятно красивая!</p>
+			<p>Твоя улыбка освещает весь мир.</p>
+			<p>Ты умна и талантлива!</p>
+			<p>С тобой всегда интересно и весело.</p>
+			<p>Ты даришь тепло и радость окружающим.</p>
+			<p>Твоя доброта не знает границ.</p>
+		</div>
+	</div>
+
+</body>
+
+</html>
